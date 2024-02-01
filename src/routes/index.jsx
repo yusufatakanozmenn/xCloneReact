@@ -6,7 +6,8 @@ import MainLayout from "~/layouts/main/index.jsx";
 import Messages from "~/pages/messages/index.jsx";
 import Lists from "~/pages/lists/index.jsx";
 import Bookmarks from "~/pages/bookmarks/index.jsx";
-import Communities from "~/pages/communities/index.jsx";
+import NotFound from "~/pages/not-found/index.jsx";
+import Verified from "~/pages/verified/index.jsx";
 
 const routes = createBrowserRouter([
     {
@@ -38,14 +39,13 @@ const routes = createBrowserRouter([
                 element: <Bookmarks/>
             },
             {
-                path: "communities",
-                element: <Communities/>
+                path: "verified",
+                element: <Verified/>
             },
             {
-                path: ""
+                path: '*',
+                element: <NotFound/>
             }
-
-
         ]
 
     },
